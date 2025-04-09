@@ -5,6 +5,7 @@ import { base, heading } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
 import { subheading } from "@/constants/fonts";
 
+
 export const metadata = generateMetadata();
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
             >
                     <Toaster richColors theme="dark" position="top-right" />
                     {children}
+                    
             </body>
         </html>
     );

@@ -10,29 +10,23 @@ const Navbar = () => {
         <header className="sticky top-0 w-full h-16 bg-background/80 backdrop-blur-sm z-50">
             <Wrapper className="h-full">
                 <div className="flex items-center justify-between h-full">
-                    <div className="flex items-center">
-                        <Link href="/" className="flex items-center gap-2">
-                            <Icons.icon className="w-6" />
+                    <div className="flex items-center gap-0">
+                        <Link href="/" className="flex items-center gap-4">
+                            <img 
+                                src="/images/logof.png"
+                                alt="7Gence Logo"
+                                className="h-12 w-auto filter  "
+                            />
                             <span className="text-xl font-semibold hidden lg:block">
-                                Vetra
+                                7Gence
                             </span>
                         </Link>
                     </div>
 
-                    <div className="hidden lg:flex items-center gap-4">
-                        <ul className="flex items-center gap-8">
-                            {NAV_LINKS.map((link, index) => (
-                                <li key={index} className="text-sm font-medium -1 link">
-                                    <Link href={link.href}>
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    
 
                     <div className="flex items-center gap-4">
-                        <Link href="#" className="hidden lg:block">
+                        <Link href="https://app.cal.com/event-types/1890398?tabName=setup" className="hidden lg:block">
                             <Button variant="blue">
                                 Get Started
                             </Button>

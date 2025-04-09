@@ -41,12 +41,12 @@ const CTA = () => {
                         }}
                     />
                     <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-medium !leading-snug">
-                        Ready to boost your <br /> <span className="font-subheading italic">marketing</span> ?
+                        Ready to boost your <br /> <span className="font-subheading italic">Business</span> ?
                     </h2>
                     <p className="text-sm md:text-lg text-center text-accent-foreground/80 max-w-2xl mx-auto mt-4">
-                        Transform your marketing with AI-powered automation. Create campaigns faster, generate better content <span className="hidden lg:inline">and make smarter decisions in minutes.</span>
+                        Transform your business with AI-powered solutions <span className="hidden lg:inline">and make smarter decisions in minutes.</span>
                     </p>
-                    <Link href="#pricing" className="mt-8">
+                    <Link href="https://app.cal.com/event-types/1890398?tabName=setup" className="mt-8">
                         <Button size="lg">
                             Let&apos;s get started
                         </Button>

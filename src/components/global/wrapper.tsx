@@ -4,7 +4,6 @@ import { cn } from "@/lib";
 interface Props {
     className?: string;
     children: React.ReactNode;
-<<<<<<< HEAD
     ctaRef?: React.Ref<HTMLDivElement>;
 }
 
@@ -20,11 +19,6 @@ const Wrapper = ({ children, className, ctaRef }: Props) => {
         }
         return child;
     });
-=======
-}
-
-const Wrapper = ({ children, className }: Props) => {
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
     return (
         <div
             className={cn(
@@ -32,11 +26,7 @@ const Wrapper = ({ children, className }: Props) => {
                 className
             )}
         >
-<<<<<<< HEAD
             {childrenWithRef}
-=======
-            {children}
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
         </div>
     )
 };

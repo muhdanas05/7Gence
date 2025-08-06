@@ -95,6 +95,48 @@ img {
   pointer-events: none;
 }
 
+<<<<<<< HEAD
+/* Date input styling for better cross-browser compatibility */
+input[type="date"] {
+  position: relative;
+  background-color: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: hsl(var(--primary));
+  border: 1px solid hsl(var(--border));
+  border-radius: 4px;
+  padding: 6px;
+  cursor: pointer;
+  filter: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  background-color: hsl(var(--primary));
+}
+
+/* Firefox date input styling */
+input[type="date"]::-moz-calendar-picker-indicator {
+  background-color: hsl(var(--primary));
+  border: 1px solid hsl(var(--border));
+  border-radius: 4px;
+  padding: 6px;
+  cursor: pointer;
+  filter: none;
+  opacity: 0.8;
+}
+
+=======
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
 .link {
   position: relative;
   transition: color 0.3s ease-in-out;

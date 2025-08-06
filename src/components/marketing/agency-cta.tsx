@@ -1,22 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { ArrowRightIcon, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import Container from "../global/container";
 import { Button } from "../ui/button";
+import { motion } from "framer-motion";
 import Particles from "../ui/particles";
-<<<<<<< HEAD
-import React from "react";
 
-const CTA = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
-    return (
-        <div ref={ref} className="relative flex flex-col items-center justify-center w-full py-20">
-=======
-
-const CTA = () => {
+const AgencyCTA = () => {
     return (
         <div className="relative flex flex-col items-center justify-center w-full py-20">
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
             <Container className="py-20 max-w-6xl mx-auto">
                 <div className="relative flex flex-col items-center justify-center py-12 lg:py-20 px-0 rounded-2xl lg:rounded-3xl bg-background/20 text-center border border-foreground/20 overflow-hidden">
                     <Particles
@@ -48,44 +41,28 @@ const CTA = () => {
                             ease: "linear"
                         }}
                     />
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-medium !leading-snug">
-                        Ready to boost your <br /> <span className="font-subheading italic">Business</span> ?
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-medium !leading-snug max-w-4xl mx-auto">
+                        Ready to elevate your agency?
                     </h2>
                     <p className="text-sm md:text-lg text-center text-accent-foreground/80 max-w-2xl mx-auto mt-4">
-                        Transform your business with AI-powered solutions <span className="hidden lg:inline">and make smarter decisions in minutes.</span>
+                        Unlock growth and efficiency with our Agency Developer Program—AI experts, automations, and white-label solutions for your clients.
                     </p>
-<<<<<<< HEAD
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                        <Link href="/form">
+                        <Link href="/agency-developer-program/form">
                             <Button variant="white" size="lg">
-                                Project Inquiry
+                                Apply Now
                             </Button>
                         </Link>
                         <Link href="https://calendly.com/anas-7gence/discovery-call">
-                        <Button variant="outline" size="lg">
-                            Let&apos;s get started
-                        </Button>
-                    </Link>
+                            <Button size="lg" variant="outline" >
+                                Get Started
+                            </Button>
+                        </Link>
                     </div>
-=======
-                    <Link href="https://app.cal.com/event-types/1890398?tabName=setup" className="mt-8">
-                        <Button size="lg">
-                            Let&apos;s get started
-                        </Button>
-                    </Link>
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
                 </div>
             </Container>
         </div>
     )
-<<<<<<< HEAD
-});
-
-CTA.displayName = "CTA";
-
-export default CTA;
-=======
 };
 
-export default CTA
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
+export default AgencyCTA 

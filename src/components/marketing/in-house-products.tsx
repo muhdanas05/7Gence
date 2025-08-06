@@ -57,10 +57,10 @@ const InHouseProducts = () => {
           {productDetails.map((product, i) => (
             <div
               key={product.title}
-              className="[perspective:1200px] w-full h-full h-[600px] md:h-[480px]"
+              className="[perspective:1200px] w-full h-full h-[680px] md:h-[480px]"
             >
               <motion.div
-                className="relative w-full h-full h-[600px] md:h-[480px]"
+                className="relative w-full h-full h-[680px] md:h-[480px]"
                 style={{ transformStyle: 'preserve-3d' }}
                 animate={{ rotateY: openIndex === i ? 180 : 0 }}
                 transition={{ duration: 0.7, type: 'spring' }}
@@ -129,7 +129,7 @@ const InHouseProducts = () => {
                     className="p-4 lg:p-8 w-full h-full flex flex-col items-center justify-between overflow-hidden"
                   >
                     <div className="absolute bottom-0 right-0 bg-blue-500 w-1/4 h-1/4 blur-[8rem] z-20"></div>
-                    <div className="space-y-6 relative z-30 flex flex-col items-center h-full w-full overflow-y-auto justify-center px-2">
+                    <div className="space-y-6 relative z-30 flex flex-col items-center h-full w-full overflow-y-auto justify-start py-8 px-2">
                       <h3 className="text-xl font-bold  text-center text-foreground">
                         {product.title} Overview
                       </h3>

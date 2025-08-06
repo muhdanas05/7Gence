@@ -71,11 +71,7 @@ const Hero = () => {
                     </Container>
                     <Container delay={0.25} className="z-20">
                         <div className="flex items-center justify-center mt-6 gap-x-4">
-<<<<<<< HEAD
                             <Link href="https://calendly.com/anas-7gence/discovery-call" className="flex items-center gap-2 group">
-=======
-                            <Link href="https://app.cal.com/event-types/1890398?tabName=setup" className="flex items-center gap-2 group">
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
                                 <Button size="lg">
                                     Book an appointment now
                                     <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-all duration-300" />

@@ -24,17 +24,16 @@ const MarketingLayout = ({ children }: Props) => {
         return () => observer.disconnect();
     }, [ctaRef]);
 
-    // Clone children and inject ctaRef into CTA
+    // Clone children and inject ctaRef into Wrapper only
     const childrenWithRef = React.Children.map(children, child => {
         if (
             React.isValidElement(child) &&
             child.type &&
             (child.type as any).name === "Wrapper"
         ) {
-            // Look for CTA inside Wrapper
             return React.cloneElement(child, {
-                ctaRef
-            });
+                ctaRef: ctaRef
+            } as any);
         }
         return child;
     });

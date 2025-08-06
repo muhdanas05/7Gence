@@ -26,9 +26,9 @@ const JOBS = [
   // ... more jobs
 ];
 
-export default function JobApplicationPage({ params }) {
+export default async function JobApplicationPage({ params }: { params: Promise<{ jobId: string }> }) {
+  const { jobId } = await params;
   const router = useRouter();
-  const { jobId } = React.use(params);
   const job = JOBS.find((j) => j.id === jobId) || JOBS[0];
 
   // Form state
@@ -51,15 +51,19 @@ export default function JobApplicationPage({ params }) {
     alert("Autofill from resume is a placeholder in this demo.");
   };
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    let file: File | null = null;
+    if (e.target instanceof HTMLInputElement && e.target.files) {
+      file = e.target.files[0];
+    }
     setForm((prev) => ({
       ...prev,
-      [name]: files ? files[0] : value,
+      [name]: file ? file : value,
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
     setError("");
@@ -90,7 +94,7 @@ export default function JobApplicationPage({ params }) {
         referral: "",
       });
     } catch (err) {
-      setError(err.message || "Something went wrong");
+      setError((err as Error).message || "Something went wrong");
     } finally {
       setSubmitting(false);
     }

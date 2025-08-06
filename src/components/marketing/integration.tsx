@@ -14,15 +14,24 @@ const SOCIAL_PLATFORMS = [
         position: "left-1", 
         size: "large", 
         iconSize: "large", 
+<<<<<<< HEAD
         className: "flex",
         link: "https://www.linkedin.com/company/7gence/" // new link property 
+=======
+        className: "hidden lg:flex",
+        link: "https://www.linkedin.com/in/muhammad-anas-zeb" // new link property 
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
     },
     { 
         icon: Icons.facebook, 
         position: "right-1", 
         size: "large", 
         iconSize: "large", 
+<<<<<<< HEAD
         className: "flex"
+=======
+        className: "hidden lg:flex"
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
         // add a link property if needed
     }
 ];
@@ -60,6 +69,7 @@ const Integration = () => {
     };
 
     return (
+<<<<<<< HEAD
         <div className="relative flex flex-col items-center justify-center w-full py-10">
             <Container className="relative">
                 <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
@@ -104,6 +114,20 @@ const Integration = () => {
                                 </div>
                             );
                         })}
+=======
+        <div className="relative flex flex-col items-center justify-center w-full py-20">
+            <Container className="relative">
+                <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
+                    <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
+                    <div className="max-w-sm w-full h-auto mx-auto mt-8">
+                        <Image
+                            src="/images/integration.svg"
+                            alt="Integration"
+                            width={1000}
+                            height={1000}
+                            className="w-full h-auto"
+                        />
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
                     </div>
                 </div>
             </Container>
@@ -114,7 +138,11 @@ const Integration = () => {
                 </h2>
             </div>
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:bottom-1/4 inset-x-0 z-20 mt-8 lg:mt-0">
+<<<<<<< HEAD
                 <Link href="https://www.linkedin.com/company/7gence/">
+=======
+                <Link href="https://app.cal.com/event-types/1890398?tabName=setup">
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
                     <Button size="lg">
                         Connect now
                         <ArrowRightIcon className="size-4" />

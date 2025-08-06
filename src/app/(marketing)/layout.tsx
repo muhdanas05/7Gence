@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 "use client";
 
 import Footer from "@/components/marketing/footer";
 import Navbar from "@/components/marketing/navbar";
 import React, { useRef, useEffect, useState } from 'react';
+=======
+import Footer from "@/components/marketing/footer";
+import Navbar from "@/components/marketing/navbar";
+import React from 'react';
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
 
 interface Props {
     children: React.ReactNode
 }
 
 const MarketingLayout = ({ children }: Props) => {
+<<<<<<< HEAD
     const [hideNavbar, setHideNavbar] = useState(false);
     const ctaRef = useRef<HTMLElement | null>(null);
 
@@ -44,6 +51,13 @@ const MarketingLayout = ({ children }: Props) => {
             {!hideNavbar && <Navbar />}
             <main className="mx-auto w-full z-40 relative">
                 {childrenWithRef}
+=======
+    return (
+        <>
+            <Navbar />
+            <main className="mx-auto w-full z-40 relative">
+                {children}
+>>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
             </main>
             <Footer />
         </>

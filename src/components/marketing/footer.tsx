@@ -69,7 +69,7 @@ const Footer = () => {
                                     </li>
                                     <li className="mt-2">
                                         <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Phone: +918102772594
+                                            Phone: +916364758004
                                         </Link>
                                     </li>
                                 </ul>
@@ -101,7 +101,7 @@ const Footer = () => {
             <Container delay={0.5} className="w-full relative mt-6 lg:mt-10">
                 <div className="mt-4 md:flex md:items-center justify-center footer w-full">
                     <p className="text-sm text-muted-foreground mt-4 md:mt-0">
-                        &copy; {new Date().getFullYear()}. All rights reserved - Bengaluru, India
+                        &copy; {new Date().getFullYear()}. All rights reserved
                     </p>
                 </div>
             </Container>

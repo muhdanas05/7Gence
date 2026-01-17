@@ -21,37 +21,15 @@ export const generateMetadata = ({
     icons = [
         {
             rel: "icon",
-            url: "/icons/7gence(tp).svg",
-            type: "image/svg+xml",
-<<<<<<< HEAD
-            sizes: "612x612",
-=======
-            sizes: "512x512",
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
+            url: "/icons/favicon.png",
+            type: "image/png",
+            sizes: "32x32 48x48 64x64 96x96 128x128 256x256",
         },
         {
             rel: "apple-touch-icon",
-            url: "/icons/7gence(tp).svg",
+            url: "/icons/favicon.png",
             sizes: "180x180",
-            type: "image/svg+xml",
-        },
-        {
-            rel: "alternate icon",
-            url: "/favicon.ico",
-            type: "image/x-icon",
-            sizes: "16x16 32x32 48x48",
-        },
-        {
-            rel: "mask-icon",
-            url: "/icons/safari-icon.svg",
-            color: "#000000",
-        },
-        {
-            rel: "icon",
-            url: "/icons/logo.png",
             type: "image/png",
-            sizes: "any",
-            media: "(prefers-color-scheme: dark)",
         },
     ],
     noIndex = false,

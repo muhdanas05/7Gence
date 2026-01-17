@@ -20,7 +20,7 @@ const AgencyHero = () => {
                         Partner with 7Gence: Development & Growth for AI Agencies
                     </h1>
                     <p className="text-sm md:text-lg text-center text-accent-foreground/80 max-w-2xl mx-auto mt-4 md:mt-6 px-4">
-                        Our experts become your experts—no new hires required.
+                        Our experts become your experts, no new hires required.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mt-6 md:mt-8 w-full px-4">

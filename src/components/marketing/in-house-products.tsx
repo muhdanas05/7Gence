@@ -45,15 +45,15 @@ const InHouseProducts = () => {
   return (
     <div id="in-house-innovations" className="relative flex flex-col items-center justify-center w-full py-20">
       <Container>
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
-            Our In-House Innovations
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 md:mb-12 px-4 md:px-0">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
+            What We&apos;ve Built for Ourselves
           </h2>
-          <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-4">
-            Crafted with AI precision to solve real-world challenges
+          <p className="text-sm sm:text-base md:text-lg text-center text-accent-foreground/80 mt-4 md:mt-4">
+            Before we build for clients, we build for ourselves. Two live products, with more in the pipeline.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8 w-full px-4 md:px-0">
           {productDetails.map((product, i) => (
             <div
               key={product.title}
@@ -155,8 +155,8 @@ const InHouseProducts = () => {
           ))}
         </div>
         <div className="flex flex-col items-center justify-center mt-8 max-w-2xl mx-auto text-center">
-          <h3 className="text-lg font-semibold mb-2">{comingSoon.title}</h3>
-          <p className="text-sm text-muted-foreground">{comingSoon.description}</p>
+          <h3 className="text-lg font-semibold mb-2">More innovations coming</h3>
+          <p className="text-sm text-muted-foreground">We ship new tools regularly. Follow us to stay updated.</p>
         </div>
       </Container>
     </div>

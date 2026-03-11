@@ -8,15 +8,15 @@ const AgencyOverview = () => {
     return (
         <div className="relative flex flex-col items-center justify-center w-full py-20">
             <Container>
-                <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
+                <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 md:mb-12 px-4 md:px-0">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
                         Agency Programs Overview
                     </h2>
-                    <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-4">
+                    <p className="text-sm sm:text-base md:text-lg text-center text-accent-foreground/80 mt-4">
                         Explore our specialized programs for agencies: on-demand AI development solutions.
                     </p>
                 </div>
-                <div className="flex justify-center max-w-6xl mx-auto">
+                <div className="flex justify-center max-w-6xl mx-auto px-4 md:px-0">
                     {/* Agency Developer Program */}
                     <div className="rounded-2xl bg-background/40 relative border border-border/50 w-full max-w-2xl">
                         <MagicCard

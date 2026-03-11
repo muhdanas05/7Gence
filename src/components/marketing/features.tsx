@@ -8,12 +8,12 @@ const Features = () => {
     return (
         <div className="relative flex flex-col items-center justify-center w-full py-20">
             <Container>
-                <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        AI-Powered solutions <br /> made <span className="font-subheading italic">simple</span>
+                <div className="flex flex-col items-center text-center max-w-2xl mx-auto px-4 md:px-0">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
+                        We Build AI That Works. <br />Not AI That Sounds Good <span className="font-subheading italic">in a Demo.</span>
                     </h2>
-                    <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                    From intelligent automation to smart chatbots, AI agents, and custom AI-powered tools, streamline operations, enhance customer engagement, and drive business growth effortlessly.
+                    <p className="text-sm sm:text-base md:text-lg text-center text-accent-foreground/80 mt-4 md:mt-6">
+                    Every system we build is production-grade. Deployed, tested, and delivering real results. Here&apos;s what we build most.
                     </p>
                 </div>
             </Container>

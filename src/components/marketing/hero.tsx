@@ -14,25 +14,16 @@ const Hero = () => {
 
             <div className="flex flex-col items-center justify-center gap-y-8 relative">
                 <Container className="hidden lg:flex absolute inset-0 top-0 mb-auto flex-col items-center justify-center w-full min-h-screen -z-10">
-                    <OrbitingCircles
-                        speed={0.5}
-                        radius={300}
-                    >
+                    <OrbitingCircles speed={0.5} radius={300}>
                         <Icons.circle1 className="size-4 text-foreground/70" />
                         <Icons.circle2 className="size-1 text-foreground/80" />
                     </OrbitingCircles>
-                    <OrbitingCircles
-                        speed={0.25}
-                        radius={400}
-                    >
+                    <OrbitingCircles speed={0.25} radius={400}>
                         <Icons.circle2 className="size-1 text-foreground/50" />
                         <Icons.circle1 className="size-4 text-foreground/60" />
                         <Icons.circle2 className="size-1 text-foreground/90" />
                     </OrbitingCircles>
-                    <OrbitingCircles
-                        speed={0.1}
-                        radius={500}
-                    >
+                    <OrbitingCircles speed={0.1} radius={500}>
                         <Icons.circle2 className="size-1 text-foreground/50" />
                         <Icons.circle2 className="size-1 text-foreground/90" />
                         <Icons.circle1 className="size-4 text-foreground/60" />
@@ -51,40 +42,36 @@ const Hero = () => {
                                 <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-[9px] font-medium mr-2 text-white">
                                     NEW
                                 </span>
-                                Available For new Projects
+                                Available for new projects
                             </span>
                         </button>
                     </Container>
                     <Container delay={0.15}>
-                        <h1 className="text-4xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
-                            Transform your {" "}
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-center !leading-tight max-w-4xl mx-auto px-4 md:px-0">
+                            We Build the AI Systems That{" "}
                             <span className="">
-                                Business {" "}
-                            </span>
-                            with AI Precision
+                                Run Your Business
+                            </span>{" "}
+                            While You Sleep
                         </h1>
                     </Container>
                     <Container delay={0.2}>
-                        <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
-                        AI-powered automation, agents, and intelligent solutions to streamline operations, enhance customer engagement, and scale your business.
+                        <p className="max-w-xl mx-auto mt-2 text-sm sm:text-base lg:text-lg text-center text-muted-foreground px-4 md:px-0">
+                        From intelligent voice agents to autonomous lead pipelines. 7Gence engineers custom AI infrastructure so your team can focus on growth, not operations.
                         </p> 
                     </Container>
                     <Container delay={0.25} className="z-20">
                         <div className="flex items-center justify-center mt-6 gap-x-4">
-<<<<<<< HEAD
                             <Link href="https://calendly.com/anas-7gence/discovery-call" className="flex items-center gap-2 group">
-=======
-                            <Link href="https://app.cal.com/event-types/1890398?tabName=setup" className="flex items-center gap-2 group">
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
                                 <Button size="lg">
-                                    Book an appointment now
+                                    Get a Free Strategy Audit
                                     <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-all duration-300" />
                                 </Button>
                             </Link>
                         </div>
                     </Container>
-                    <Container delay={0.3} className="relative">
-                        <div className="relative rounded-xl lg:rounded-[32px] border border-border p-2 backdrop-blur-lg mt-10 max-w-6xl mx-auto">
+                    <Container delay={0.3} className="relative px-4 md:px-0">
+                        <div className="relative rounded-xl lg:rounded-[32px] border border-border p-2 backdrop-blur-lg mt-8 lg:mt-10 max-w-6xl mx-auto">
                             <div className="absolute top-1/8 left-1/2 -z-10 bg-gradient-to-r from-sky-500 to-blue-600 w-1/2 lg:w-3/4 -translate-x-1/2 h-1/4 -translate-y-1/2 inset-0 blur-[4rem] lg:blur-[10rem] animate-image-glow"></div>
                             <div className="hidden lg:block absolute -top-1/8 left-1/2 -z-20 bg-blue-600 w-1/4 -translate-x-1/2 h-1/4 -translate-y-1/2 inset-0 blur-[10rem] animate-image-glow"></div>
 

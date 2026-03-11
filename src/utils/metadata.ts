@@ -23,11 +23,7 @@ export const generateMetadata = ({
             rel: "icon",
             url: "/icons/7gence(tp).svg",
             type: "image/svg+xml",
-<<<<<<< HEAD
             sizes: "612x612",
-=======
-            sizes: "512x512",
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
         },
         {
             rel: "apple-touch-icon",

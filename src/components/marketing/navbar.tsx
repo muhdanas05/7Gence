@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 "use client";
 
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-=======
-import { NAV_LINKS } from "@/constants";
-import Link from "next/link";
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 import MobileMenu from "./mobile-menu";
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -20,7 +14,6 @@ const Navbar = () => {
     const isOnFormPage = pathname === "/form";
     const isOnAgencyDevPage = pathname === "/agency-developer-program";
 
-    // Scroll direction state
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -31,9 +24,9 @@ const Navbar = () => {
                 window.requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
                     if (currentScrollY > lastScrollY && currentScrollY > 40) {
-                        setShowNavbar(false); // Scrolling down
+                        setShowNavbar(false);
                     } else {
-                        setShowNavbar(true); // Scrolling up
+                        setShowNavbar(true);
                     }
                     setLastScrollY(currentScrollY);
                     ticking = false;
@@ -47,12 +40,6 @@ const Navbar = () => {
 
     return (
         <header className={`sticky top-0 w-full h-16 bg-background/80 backdrop-blur-sm z-50 transition-transform duration-500 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
-=======
-
-const Navbar = () => {
-    return (
-        <header className="sticky top-0 w-full h-16 bg-background/80 backdrop-blur-sm z-50">
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
             <Wrapper className="h-full">
                 <div className="flex items-center justify-between h-full">
                     <div className="flex items-center gap-0">
@@ -60,7 +47,7 @@ const Navbar = () => {
                             <img 
                                 src="/images/logof.png"
                                 alt="7Gence Logo"
-                                className="h-12 w-auto filter  "
+                                className="h-12 w-auto filter"
                             />
                             <span className="text-xl font-semibold hidden lg:block">
                                 7Gence
@@ -68,10 +55,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    
-
                     <div className="flex items-center gap-4">
-<<<<<<< HEAD
                         <Link href={isOnFormPage || isOnAgencyDevPage ? "/" : "/form"} className="hidden lg:block">
                             <Button variant="outline">
                                 {isOnFormPage || isOnAgencyDevPage ? "Home" : "Project Inquiry"}
@@ -84,10 +68,6 @@ const Navbar = () => {
                         </Link>
                         <Link href="https://calendly.com/anas-7gence/discovery-call" className="hidden lg:block">
                             <Button variant="default">
-=======
-                        <Link href="https://app.cal.com/event-types/1890398?tabName=setup" className="hidden lg:block">
-                            <Button variant="blue">
->>>>>>> 11a90d6765be9d68ca38d00f753ff591c6cf0221
                                 Get Started
                             </Button>
                         </Link>

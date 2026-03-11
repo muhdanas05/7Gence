@@ -137,7 +137,7 @@ const AgencyLogosMarquee = () => {
       {/* Marquee strip */}
       <div className="flex w-full overflow-hidden">
         <div
-          className="flex items-center gap-16 animate-marquee hover:[animation-play-state:paused] shrink-0"
+          className="flex items-center gap-16 animate-marquee hover:[animation-play-state:paused] shrink-0 w-max"
           style={{ willChange: "transform", whiteSpace: "nowrap" }}
         >
           {doubled.map((agency, i) => (

@@ -67,7 +67,6 @@ const results = [
       style: { filter: "none", mixBlendMode: "normal" as const },
       pill: true,
     },
-    logoLabel: "• Blueprint Labs",
   },
   {
     icon: Inbox,
@@ -206,13 +205,7 @@ const Results = () => {
                             unoptimized
                           />
                         </div>
-                        {"logoLabel" in result && result.logoLabel && (
-                          <span className="text-xs font-semibold text-muted-foreground/70 whitespace-nowrap">
-                            {result.logoLabel}
-                          </span>
-                        )}
                       </div>
-
                   </div>
                 </div>
 
@@ -272,7 +265,7 @@ const Results = () => {
         {/* Marquee track */}
         <div className="flex w-full overflow-hidden">
           <div
-            className="flex items-center gap-16 animate-results-marquee hover:[animation-play-state:paused] shrink-0"
+            className="flex items-center gap-16 animate-results-marquee hover:[animation-play-state:paused] shrink-0 w-max"
             style={{ willChange: "transform", whiteSpace: "nowrap" }}
           >
             {doubled.map((client, i) => (

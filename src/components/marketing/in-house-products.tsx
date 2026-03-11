@@ -57,10 +57,10 @@ const InHouseProducts = () => {
           {productDetails.map((product, i) => (
             <div
               key={product.title}
-              className="[perspective:1200px] w-full h-full h-[600px] md:h-[480px]"
+              className="[perspective:1200px] w-full h-[600px] md:h-[480px]"
             >
               <motion.div
-                className="relative w-full h-full h-[600px] md:h-[480px]"
+                className="relative w-full h-[600px] md:h-[480px]"
                 style={{ transformStyle: 'preserve-3d' }}
                 animate={{ rotateY: openIndex === i ? 180 : 0 }}
                 transition={{ duration: 0.7, type: 'spring' }}

@@ -37,10 +37,7 @@ export function OrbitingCircles({
                     className="pointer-events-none absolute inset-0 size-full"
                 >
                     <circle
-                        className={cn(
-                            "stroke-white/10 stroke-1",
-                            stroke && stroke
-                        )}
+                        className="stroke-white/25 stroke-[1.5]"
                         strokeDasharray="5 5"
                         cx="50%"
                         cy="50%"

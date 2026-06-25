@@ -6,7 +6,13 @@ import Hero from "@/components/marketing/hero";
 import Integration from "@/components/marketing/integration";
 import InHouseProducts from "@/components/marketing/in-house-products";
 import Results from "@/components/marketing/results";
+import { generateMetadata } from "@/utils";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    ...generateMetadata(),
+    robots: { index: false, follow: false },
+};
 
 const HomePage = () => {
     return (

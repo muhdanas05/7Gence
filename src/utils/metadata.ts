@@ -18,36 +18,22 @@ interface MetadataProps {
 export const generateMetadata = ({
     title = `7Gence`,
     description = `7Gence is an AI Agency which leverage AI to automate workflows,build AI powered custom Agents, and boost productivity.`,
+    // favicon.png is a tight crop — the mark fills the canvas. 7gence(tp).svg sits in
+    // ~45% transparent padding, so at a 32px tab it rendered around 17px and looked tiny.
+    // The three entries removed alongside it (/favicon.ico, /icons/safari-icon.svg,
+    // /icons/logo.png) pointed at files that do not exist and 404'd on every page load.
     icons = [
         {
             rel: "icon",
-            url: "/icons/7gence(tp).svg",
-            type: "image/svg+xml",
-            sizes: "612x612",
+            url: "/icons/favicon.png",
+            type: "image/png",
+            sizes: "32x32 48x48 64x64 96x96 128x128 256x256",
         },
         {
             rel: "apple-touch-icon",
-            url: "/icons/7gence(tp).svg",
+            url: "/icons/favicon.png",
             sizes: "180x180",
-            type: "image/svg+xml",
-        },
-        {
-            rel: "alternate icon",
-            url: "/favicon.ico",
-            type: "image/x-icon",
-            sizes: "16x16 32x32 48x48",
-        },
-        {
-            rel: "mask-icon",
-            url: "/icons/safari-icon.svg",
-            color: "#000000",
-        },
-        {
-            rel: "icon",
-            url: "/icons/logo.png",
             type: "image/png",
-            sizes: "any",
-            media: "(prefers-color-scheme: dark)",
         },
     ],
     noIndex = false,

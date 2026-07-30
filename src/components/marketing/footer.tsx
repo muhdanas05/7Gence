@@ -67,11 +67,6 @@ const Footer = () => {
                                             Email: anas@7gence.com
                                         </Link>
                                     </li>
-                                    <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Phone: +916364758004
-                                        </Link>
-                                    </li>
                                 </ul>
                             </div>
                         </Container>

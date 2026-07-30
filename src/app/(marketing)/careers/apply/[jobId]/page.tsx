@@ -18,7 +18,7 @@ const JOBS = [
     id: "senior-automation-developer",
     title: "Senior Automation Developer",
     department: "Automation",
-    location: "Bengaluru, India",
+    location: "Remote",
     employment: "Full-time",
     summary: "3-5 years in automation, AI workflows, remote friendly",
     salary: "₹12L–₹18L",

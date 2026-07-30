@@ -169,18 +169,20 @@ export const generateMetadata = ({
     type = "website",
 }: MetadataProps = {}): Metadata => {
     const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://7gence.com");
+    // ponytail: NEXT_PUBLIC_APP_NAME is unset, which rendered "<page> | undefined" in every tab title
+    const appName = process.env.NEXT_PUBLIC_APP_NAME || "7Gence";
 
     return {
         metadataBase,
         title: {
-            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+            template: `%s | ${appName}`,
             default: title
         },
         description,
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME,
+        publisher: appName,
         formatDetection: {
             email: false,
             address: false,

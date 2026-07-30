@@ -33,10 +33,10 @@ const JOBS = [
     id: "ai-solutions-architect",
     title: "AI Solutions Architect",
     department: "AI/ML",
-    location: "Bengaluru, India",
+    location: "Remote",
     employment: "Full-time",
     experience: "5+ yrs exp",
-    mode: "On-site",
+    mode: "Remote",
     salary: "₹12L–₹18L",
     link: "/careers/apply/ai-solutions-architect",
   },
@@ -55,7 +55,7 @@ const JOBS = [
 ];
 
 const DEPARTMENTS = ["All Departments", "Engineering", "AI/ML", "Design"];
-const LOCATIONS = ["All Locations", "Remote", "Bengaluru, India"];
+const LOCATIONS = ["All Locations", "Remote"];
 const EMPLOYMENTS = ["All Types", "Full-time", "Part-time", "Contract"];
 
 export default function CareersPage() {

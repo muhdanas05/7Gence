@@ -15,7 +15,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="flex flex-col relative items-center justify-center border-t border-foreground/5 pt-8 pb-8 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-12">
+        <footer className="flex flex-col relative items-center justify-center border-t border-foreground/5 pt-8 pb-8 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-12 overflow-hidden">
             <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
                 <Container>
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
@@ -67,11 +67,6 @@ const Footer = () => {
                                             Email: anas@7gence.com
                                         </Link>
                                     </li>
-                                    <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Phone: +916364758004
-                                        </Link>
-                                    </li>
                                 </ul>
                             </div>
                         </Container>
@@ -94,14 +89,41 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </Container>
+                        <Container delay={0.4} className="h-auto">
+                            <div className="mt-6 md:mt-0 flex flex-col">
+                                <h3 className="text-base font-medium text-foreground">
+                                    Legal
+                                </h3>
+                                <ul className="mt-4 text-sm text-muted-foreground space-y-4">
+                                    <li className="mt-2">
+                                        <Link href="/privacy-policy" className="link hover:text-foreground transition-all duration-300">
+                                            Privacy Policy
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </Container>
                     </div>
                 </div>
             </div>
 
+            {/* Oversized wordmark anchoring the footer. Decorative, so hidden from screen readers.
+                19rem is measured, not guessed: "7Gence" in Satoshi Bold advances 3.573em, and
+                3.573 x 304px = 1086px, i.e. the 1088px inner width of this max-w-6xl container.
+                No tracking- utility here — letter-spacing would break that fit. */}
+            <Container delay={0.4} className="w-full mt-16 lg:mt-24">
+                <div
+                    aria-hidden="true"
+                    className="select-none pointer-events-none text-center font-heading font-bold leading-[0.8] text-[clamp(3rem,24vw,19rem)] bg-gradient-to-b from-foreground/25 to-foreground/[0.04] bg-clip-text text-transparent"
+                >
+                    7Gence
+                </div>
+            </Container>
+
             <Container delay={0.5} className="w-full relative mt-6 lg:mt-10">
                 <div className="mt-4 md:flex md:items-center justify-center footer w-full">
                     <p className="text-sm text-muted-foreground mt-4 md:mt-0">
-                        &copy; {new Date().getFullYear()}. All rights reserved - Bengaluru, India
+                        &copy; {new Date().getFullYear()} 7Gence LLC. All rights reserved - Wyoming, USA
                     </p>
                 </div>
             </Container>

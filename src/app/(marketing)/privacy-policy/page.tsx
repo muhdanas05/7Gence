@@ -13,12 +13,20 @@ export const metadata = generateMetadata({
 const LAST_UPDATED = "July 29, 2026";
 
 // ponytail: local to this page — legal copy is content, not a reusable pattern
-const Section = ({ number, title, children }: { number: number; title: string; children: React.ReactNode }) => (
+const Section = ({ number, title, icon: Icon, children }: {
+    number: number;
+    title: string;
+    icon?: React.ComponentType<{ className?: string }>;
+    children: React.ReactNode;
+}) => (
     <Container delay={0.1}>
         <section className="scroll-mt-24" id={`section-${number}`}>
             <h2 className="text-xl md:text-2xl font-heading font-medium !leading-snug flex items-baseline gap-3">
                 <span className="text-primary/40 text-base md:text-lg tabular-nums">{number}.</span>
-                {title}
+                <span className="flex items-center gap-2.5">
+                    {Icon && <Icon className="size-5 text-primary shrink-0" />}
+                    {title}
+                </span>
             </h2>
             <div className="mt-4 space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
                 {children}
@@ -94,71 +102,47 @@ const PrivacyPolicyPage = () => {
                     ]} />
                 </Section>
 
-                {/* SMS consent — carrier-facing disclosure, called out deliberately */}
-                <Container delay={0.1}>
-                    <section className="scroll-mt-24" id="section-3">
-                        <div className="rounded-2xl bg-background/40 relative border border-border/50">
-                            <MagicCard
-                                gradientFrom="#38bdf8"
-                                gradientTo="#3b82f6"
-                                gradientColor="rgba(59,130,246,0.1)"
-                                className="p-6 lg:p-8 w-full overflow-hidden"
-                            >
-                                <div className="absolute bottom-0 right-0 bg-blue-500 w-1/4 h-1/4 blur-[8rem] z-20" />
-                                <div className="relative z-30">
-                                    <h2 className="text-xl md:text-2xl font-heading font-medium !leading-snug flex items-baseline gap-3">
-                                        <span className="text-primary/40 text-base md:text-lg tabular-nums">3.</span>
-                                        <span className="flex items-center gap-2.5">
-                                            <MessageSquareIcon className="size-5 text-primary shrink-0" />
-                                            SMS / Text Messaging
-                                        </span>
-                                    </h2>
-                                    <div className="mt-4 space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
-                                        <p>
-                                            By providing your phone number to 7Gence, you consent to receive SMS text
-                                            messages from us related to your inquiry or project. This may include
-                                            appointment confirmations, project updates, and follow-up messages.
-                                        </p>
-                                        <ul className="space-y-2">
-                                            <li className="flex items-start gap-2.5">
-                                                <span className="text-primary mt-1.5 text-xs">•</span>
-                                                <span>Message frequency may vary</span>
-                                            </li>
-                                            <li className="flex items-start gap-2.5">
-                                                <span className="text-primary mt-1.5 text-xs">•</span>
-                                                <span>Message and data rates may apply</span>
-                                            </li>
-                                            <li className="flex items-start gap-2.5">
-                                                <span className="text-primary mt-1.5 text-xs">•</span>
-                                                <span>
-                                                    Reply <strong className="text-foreground font-medium">STOP</strong> at any
-                                                    time to opt out of SMS messages
-                                                </span>
-                                            </li>
-                                            <li className="flex items-start gap-2.5">
-                                                <span className="text-primary mt-1.5 text-xs">•</span>
-                                                <span>
-                                                    Reply <strong className="text-foreground font-medium">HELP</strong> for
-                                                    assistance or contact us at{" "}
-                                                    <Link href="mailto:anas@7gence.com" className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
-                                                        anas@7gence.com
-                                                    </Link>
-                                                </span>
-                                            </li>
-                                            <li className="flex items-start gap-2.5">
-                                                <span className="text-primary mt-1.5 text-xs">•</span>
-                                                <span>
-                                                    We do not sell, share, or transfer your phone number or SMS consent to
-                                                    third parties for marketing purposes
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </MagicCard>
-                        </div>
-                    </section>
-                </Container>
+                <Section number={3} title="SMS / Text Messaging" icon={MessageSquareIcon}>
+                    <p>
+                        By providing your phone number to 7Gence, you consent to receive SMS text
+                        messages from us related to your inquiry or project. This may include
+                        appointment confirmations, project updates, and follow-up messages.
+                    </p>
+                    <ul className="space-y-2">
+                        <li className="flex items-start gap-2.5">
+                            <span className="text-primary mt-1.5 text-xs">•</span>
+                            <span>Message frequency may vary</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                            <span className="text-primary mt-1.5 text-xs">•</span>
+                            <span>Message and data rates may apply</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                            <span className="text-primary mt-1.5 text-xs">•</span>
+                            <span>
+                                Reply <strong className="text-foreground font-medium">STOP</strong> at any
+                                time to opt out of SMS messages
+                            </span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                            <span className="text-primary mt-1.5 text-xs">•</span>
+                            <span>
+                                Reply <strong className="text-foreground font-medium">HELP</strong> for
+                                assistance or contact us at{" "}
+                                <Link href="mailto:anas@7gence.com" className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
+                                    anas@7gence.com
+                                </Link>
+                            </span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                            <span className="text-primary mt-1.5 text-xs">•</span>
+                            <span>
+                                We do not sell, share, or transfer your phone number or SMS consent to
+                                third parties for marketing purposes
+                            </span>
+                        </li>
+                    </ul>
+                </Section>
 
                 <Section number={4} title="How We Share Your Information">
                     <p>We do not sell your personal information. We may share data with:</p>

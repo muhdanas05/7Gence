@@ -6,13 +6,10 @@ import Hero from "@/components/marketing/hero";
 import Integration from "@/components/marketing/integration";
 import InHouseProducts from "@/components/marketing/in-house-products";
 import Results from "@/components/marketing/results";
-import { generateMetadata } from "@/utils";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    ...generateMetadata(),
-    robots: { index: false, follow: false },
-};
+// No metadata export here on purpose: the root layout already supplies the
+// default title. Re-declaring it makes the parent template wrap its own
+// default and the tab reads "7Gence | 7Gence".
 
 const HomePage = () => {
     return (

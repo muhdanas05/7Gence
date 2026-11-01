@@ -11,7 +11,7 @@ const productDetails = [
     title: "Churn Prevention Model",
     description: "Predicts high-risk patients, automates outreach & feedback, books visits.",
     icon: Icons.icon,
-    overview: `Churn Prevention Model is an intelligent patient retention platform designed to reduce no-shows and prevent churn in healthcare clinics. Using predictive AI, it identifies high-risk patients and automatically starts a personalized outreach journey through calls, WhatsApp, and email. The system captures feedback, offers custom discounts, and even books appointments—all tracked in a centralized dashboard.\nIt also confirms upcoming appointments 24 hours prior, guiding patients on preparations via multi-channel touchpoints. With real-time analytics, risk scoring, and follow-up tracking, ChurnGuard AI empowers clinics to retain more patients, boost revenue, and improve operational efficiency effortlessly.`,
+    overview: `Churn Prevention Model is an intelligent patient retention platform designed to reduce no-shows and prevent churn in healthcare clinics. Using predictive AI, it identifies high-risk patients and automatically starts a personalized outreach journey through WhatsApp and email. The system captures feedback, offers custom discounts, and even books appointments—all tracked in a centralized dashboard.\nIt also confirms upcoming appointments 24 hours prior, guiding patients on preparations via multi-channel touchpoints. With real-time analytics, risk scoring, and follow-up tracking, ChurnGuard AI empowers clinics to retain more patients, boost revenue, and improve operational efficiency effortlessly.`,
     keyPoints: [
       "Predictive AI for patient risk scoring",
       "Automated multi-channel outreach",

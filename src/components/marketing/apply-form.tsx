@@ -148,6 +148,10 @@ const ApplyForm = ({
     const [submitting, setSubmitting] = React.useState(false);
     const [success, setSuccess] = React.useState(false);
     const [smsOptIn, setSmsOptIn] = React.useState(false);
+    // Before hydration the native form is live: a click on Next would submit it as a plain GET
+    // and put the visitor's name, email and phone into the URL. Keep the buttons off until React owns the form.
+    const [hydrated, setHydrated] = React.useState(false);
+    React.useEffect(() => setHydrated(true), []);
 
     const allFields = React.useMemo(() => steps.flatMap((s) => s.fields), [steps]);
 
@@ -422,11 +426,11 @@ const ApplyForm = ({
                                         Back
                                     </Button>
                                     {isLast ? (
-                                        <Button key="submit" type="submit" disabled={submitting}>
+                                        <Button key="submit" type="submit" disabled={submitting || !hydrated}>
                                             {submitting ? "Sending..." : submitLabel}
                                         </Button>
                                     ) : (
-                                        <Button key="next" type="submit">
+                                        <Button key="next" type="submit" disabled={!hydrated}>
                                             Next
                                             <ArrowRight className="size-4" />
                                         </Button>

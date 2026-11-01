@@ -107,6 +107,7 @@ const FormPage = () => (
         sideNote="We limit ourselves to three active projects at a time, so every client gets our full focus."
         steps={STEPS}
         webhookUrl={WEBHOOK_URL}
+        smsConsent
         submitLabel="Submit inquiry"
         successTitle="Inquiry received"
         successBody="Thanks. We'll read through it and get back to you shortly to set up a call."

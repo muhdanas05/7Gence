@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../global/container";
+import { BUSINESS, BUSINESS_ADDRESS_ONE_LINE } from "@/constants/business";
 
 const Footer = () => {
     const handleScrollToFeatures = (e: React.MouseEvent) => {
@@ -64,9 +65,16 @@ const Footer = () => {
                                     </li>
                                     <li className="mt-2">
                                         <Link href="mailto:anas@7gence.com" className="link hover:text-foreground transition-all duration-300">
-                                            Email: anas@7gence.com
+                                            Email: {BUSINESS.email}
                                         </Link>
                                     </li>
+                                    {BUSINESS.phone && (
+                                        <li className="mt-2">
+                                            <Link href={`tel:${BUSINESS.phone}`} className="link hover:text-foreground transition-all duration-300">
+                                                Phone: {BUSINESS.phoneDisplay}
+                                            </Link>
+                                        </li>
+                                    )}
                                 </ul>
                             </div>
                         </Container>
@@ -74,17 +82,17 @@ const Footer = () => {
                     <div className="md:grid md:grid-cols-2 md:gap-8">
                         <Container delay={0.3} className="h-auto">
                             <h3 className="text-base font-medium text-foreground">
-                                Resources
+                                Company
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Blog: (Stay Tuned)
+                                    <Link href="/contact" className="link hover:text-foreground transition-all duration-300">
+                                        Contact
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Newsletters: (Stay Tuned)
+                                    <Link href="/form" className="link hover:text-foreground transition-all duration-300">
+                                        Project Inquiry
                                     </Link>
                                 </li>
                             </ul>
@@ -98,6 +106,11 @@ const Footer = () => {
                                     <li className="mt-2">
                                         <Link href="/privacy-policy" className="link hover:text-foreground transition-all duration-300">
                                             Privacy Policy
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="/terms" className="link hover:text-foreground transition-all duration-300">
+                                            Terms of Service
                                         </Link>
                                     </li>
                                 </ul>
@@ -121,9 +134,12 @@ const Footer = () => {
             </Container>
 
             <Container delay={0.5} className="w-full relative mt-6 lg:mt-10">
-                <div className="mt-4 md:flex md:items-center justify-center footer w-full">
+                <div className="mt-4 flex flex-col items-center gap-1 footer w-full text-center">
                     <p className="text-sm text-muted-foreground mt-4 md:mt-0">
-                        &copy; {new Date().getFullYear()} 7Gence LLC. All rights reserved - Wyoming, USA
+                        &copy; {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved - Wyoming, USA
+                    </p>
+                    <p className="text-xs text-muted-foreground/80">
+                        {BUSINESS.legalName} · {BUSINESS_ADDRESS_ONE_LINE}
                     </p>
                 </div>
             </Container>

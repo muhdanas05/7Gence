@@ -4,13 +4,14 @@ import { MagicCard } from "@/components/ui/magic-card";
 import { generateMetadata } from "@/utils";
 import { BadgeCheckIcon, MessageSquareIcon } from "lucide-react";
 import Link from "next/link";
+import { BUSINESS, BUSINESS_ADDRESS_ONE_LINE } from "@/constants/business";
 
 export const metadata = generateMetadata({
     title: "Privacy Policy",
     description: "How 7Gence LLC collects, uses, shares, and protects your information.",
 });
 
-const LAST_UPDATED = "July 29, 2026";
+const LAST_UPDATED = "November 1, 2026";
 
 // ponytail: local to this page — legal copy is content, not a reusable pattern
 const Section = ({ number, title, icon: Icon, children }: {
@@ -104,9 +105,19 @@ const PrivacyPolicyPage = () => {
 
                 <Section number={3} title="SMS / Text Messaging" icon={MessageSquareIcon}>
                     <p>
-                        By providing your phone number to 7Gence, you consent to receive SMS text
-                        messages from us related to your inquiry or project. This may include
-                        appointment confirmations, project updates, and follow-up messages.
+                        {BUSINESS.legalName} sends SMS text messages only to people who have agreed to
+                        receive them. You agree by ticking the SMS consent box on our{" "}
+                        <Link href="/form" className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
+                            project inquiry form
+                        </Link>
+                        , by ticking the equivalent consent option when you book a call with us
+                        (for example through Calendly), or by texting us first. Agreeing is optional
+                        and is not a condition of booking a call or buying anything from us.
+                    </p>
+                    <p>
+                        The messages are about your booking and your project: appointment
+                        confirmations, reminders, schedule changes and follow-ups. They are not
+                        marketing blasts.
                     </p>
                     <ul className="space-y-2">
                         <li className="flex items-start gap-2.5">
@@ -121,7 +132,8 @@ const PrivacyPolicyPage = () => {
                             <span className="text-primary mt-1.5 text-xs">•</span>
                             <span>
                                 Reply <strong className="text-foreground font-medium">STOP</strong> at any
-                                time to opt out of SMS messages
+                                time to opt out of SMS messages. You will get one confirmation and no
+                                further messages.
                             </span>
                         </li>
                         <li className="flex items-start gap-2.5">
@@ -129,19 +141,28 @@ const PrivacyPolicyPage = () => {
                             <span>
                                 Reply <strong className="text-foreground font-medium">HELP</strong> for
                                 assistance or contact us at{" "}
-                                <Link href="mailto:anas@7gence.com" className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
-                                    anas@7gence.com
+                                <Link href={`mailto:${BUSINESS.email}`} className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
+                                    {BUSINESS.email}
                                 </Link>
+                                {BUSINESS.phone && <> or {BUSINESS.phoneDisplay}</>}
                             </span>
                         </li>
                         <li className="flex items-start gap-2.5">
                             <span className="text-primary mt-1.5 text-xs">•</span>
                             <span>
-                                We do not sell, share, or transfer your phone number or SMS consent to
-                                third parties for marketing purposes
+                                Information will not be sold or shared with third parties for
+                                promotional or marketing purposes. Text messaging originator opt-in
+                                data and consent will not be shared with any third parties.
                             </span>
                         </li>
                     </ul>
+                    <p>
+                        See our{" "}
+                        <Link href="/terms" className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
+                            Terms of Service
+                        </Link>{" "}
+                        for the full SMS program terms.
+                    </p>
                 </Section>
 
                 <Section number={4} title="How We Share Your Information">
@@ -152,7 +173,8 @@ const PrivacyPolicyPage = () => {
                     ]} />
                     <p>
                         All third-party tools we use are bound by their own privacy policies and data protection
-                        standards.
+                        standards. All the above categories exclude text messaging originator opt-in data and
+                        consent; this information will not be shared with any third parties.
                     </p>
                 </Section>
 
@@ -203,6 +225,8 @@ const PrivacyPolicyPage = () => {
                                 anas@7gence.com
                             </Link>
                         </p>
+                        <p>{BUSINESS_ADDRESS_ONE_LINE}</p>
+                        {BUSINESS.phone && <p>Phone: {BUSINESS.phoneDisplay}</p>}
                         <p>
                             Website:{" "}
                             <Link href="https://7gence.com" className="text-foreground hover:text-primary underline underline-offset-4 transition-colors">
@@ -229,6 +253,7 @@ const PrivacyPolicyPage = () => {
                                 </h3>
                                 <div className="mt-4 space-y-1.5 text-sm text-muted-foreground">
                                     <p className="text-foreground font-medium">7Gence LLC</p>
+                                    <p>{BUSINESS_ADDRESS_ONE_LINE}</p>
                                     <p>State of Wyoming, USA</p>
                                     <p>Filed 10 June 2026 · Status: Active, Good Standing</p>
                                 </div>

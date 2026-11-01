@@ -18,6 +18,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { BUSINESS } from "@/constants/business";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { DatePicker } from "@/components/ui/date-picker";
@@ -64,7 +66,16 @@ type Props = {
     art?: "star" | "burst";
     /** Merged into the POST body, e.g. a source tag for routing in n8n. */
     extraPayload?: Record<string, string>;
+    /** Shows the optional, unticked SMS consent box above the submit button. */
+    smsConsent?: boolean;
 };
+
+// Shown verbatim next to the box and stored with the submission as proof of what was agreed to.
+const SMS_CONSENT_TEXT =
+    `I agree to receive SMS text messages from ${BUSINESS.legalName} about my booking and inquiry: ` +
+    "appointment confirmations, reminders, schedule changes and follow-ups. " +
+    "Message frequency varies. Message and data rates may apply. " +
+    "Reply STOP to opt out, HELP for help. Consent is not a condition of booking or purchase.";
 
 const opt = (o: Option) => (typeof o === "string" ? { value: o, label: o } : o);
 
@@ -131,11 +142,12 @@ const InkBurst = () => (
 const ApplyForm = ({
     eyebrow, heading, blurb, watermark, sideNote, steps,
     webhookUrl, submitLabel, successTitle, successBody,
-    backHref, backLabel, art = "star", extraPayload,
+    backHref, backLabel, art = "star", extraPayload, smsConsent = false,
 }: Props) => {
     const [step, setStep] = React.useState(0);
     const [submitting, setSubmitting] = React.useState(false);
     const [success, setSuccess] = React.useState(false);
+    const [smsOptIn, setSmsOptIn] = React.useState(false);
 
     const allFields = React.useMemo(() => steps.flatMap((s) => s.fields), [steps]);
 
@@ -161,7 +173,18 @@ const ApplyForm = ({
             const res = await fetch(webhookUrl, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...data, ...extraPayload }),
+                body: JSON.stringify({
+                    ...data,
+                    ...extraPayload,
+                    ...(smsConsent && {
+                        smsConsent: smsOptIn ? "yes" : "no",
+                        ...(smsOptIn && {
+                            smsConsentText: SMS_CONSENT_TEXT,
+                            smsConsentAt: new Date().toISOString(),
+                            smsConsentPage: window.location.href,
+                        }),
+                    }),
+                }),
             });
             if (!res.ok) throw new Error(`Webhook responded ${res.status}`);
             setSuccess(true);
@@ -370,6 +393,23 @@ const ApplyForm = ({
                                         </div>
                                     ))}
                                 </div>
+
+                                {smsConsent && isLast && (
+                                    <div className="mt-8 flex items-start gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-4">
+                                        <Checkbox
+                                            id="smsConsent"
+                                            checked={smsOptIn}
+                                            onCheckedChange={(v) => setSmsOptIn(v === true)}
+                                            className="mt-1"
+                                        />
+                                        <Label htmlFor="smsConsent" className="block text-xs font-normal leading-relaxed text-muted-foreground cursor-pointer">
+                                            {SMS_CONSENT_TEXT}{" "}
+                                            <Link href="/terms#sms" target="_blank" className="underline underline-offset-2 hover:text-foreground">Terms</Link>
+                                            {" · "}
+                                            <Link href="/privacy-policy" target="_blank" className="underline underline-offset-2 hover:text-foreground">Privacy Policy</Link>
+                                        </Label>
+                                    </div>
+                                )}
 
                                 <div className="mt-8 flex items-center justify-between">
                                     <Button

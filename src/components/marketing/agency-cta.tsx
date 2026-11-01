@@ -53,7 +53,7 @@ const AgencyCTA = () => {
                                 Apply Now
                             </Button>
                         </Link>
-                        <Link href="https://calendly.com/anas-7gence/discovery-call" className="w-full sm:w-auto">
+                        <Link href="https://cal.com/muhammad-anas-s6hodg/discovery-call" className="w-full sm:w-auto">
                             <Button size="lg" variant="outline" className="w-full sm:w-auto">
                                 Get Started
                             </Button>

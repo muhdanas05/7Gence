@@ -67,7 +67,7 @@ const MobileMenu = () => {
                             </Link>
                         </div>
                         <div className="pt-1">
-                            <Link href="https://calendly.com/anas-7gence/discovery-call" className="w-full" onClick={handleButtonClick}>
+                            <Link href="https://cal.com/muhammad-anas-s6hodg/discovery-call" className="w-full" onClick={handleButtonClick}>
                                 <Button 
                                     className="w-full h-14 text-base font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" 
                                     variant="default"

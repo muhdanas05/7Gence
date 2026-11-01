@@ -111,7 +111,7 @@ const PrivacyPolicyPage = () => {
                             project inquiry form
                         </Link>
                         , by ticking the equivalent consent option when you book a call with us
-                        (for example through Calendly), or by texting us first. Agreeing is optional
+                        (on our Cal.com booking page), or by texting us first. Agreeing is optional
                         and is not a condition of booking a call or buying anything from us.
                     </p>
                     <p>

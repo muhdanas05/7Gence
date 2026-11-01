@@ -63,12 +63,12 @@ const ContactPage = () => {
                         </Row>
                         <Row icon={CalendarIcon} label="Book a call">
                             <Link
-                                href="https://calendly.com/anas-7gence/discovery-call"
+                                href="https://cal.com/muhammad-anas-s6hodg/discovery-call"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={linkClass}
                             >
-                                Free strategy audit on Calendly
+                                Free AI strategy audit (30 min, open 24/7)
                             </Link>
                         </Row>
                     </div>

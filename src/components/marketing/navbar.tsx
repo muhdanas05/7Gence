@@ -66,7 +66,7 @@ const Navbar = () => {
                                 Agency Program
                             </Button>
                         </Link>
-                        <Link href="https://calendly.com/anas-7gence/discovery-call" className="hidden lg:block">
+                        <Link href="https://cal.com/muhammad-anas-s6hodg/discovery-call" className="hidden lg:block">
                             <Button variant="default">
                                 Get Started
                             </Button>

@@ -21,7 +21,7 @@ const OfferHeader = () => {
             </Link>
 
             <Link
-                href="https://calendly.com/anas-7gence/discovery-call"
+                href="https://cal.com/muhammad-anas-s6hodg/discovery-call"
                 className="rounded-full bg-white px-6 py-3 text-[14px] font-semibold text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5B9BFF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]"
                 style={{ fontFamily: "var(--font-manrope)" }}
             >

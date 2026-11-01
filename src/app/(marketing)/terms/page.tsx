@@ -122,8 +122,8 @@ const TermsPage = () => {
                         <strong className="text-foreground font-medium">How you opt in:</strong>{" "}
                         by ticking the optional SMS consent box on our{" "}
                         <Link href="/form" className={linkClass}>project inquiry form</Link>, by ticking the
-                        equivalent consent option when you book a call with us on a scheduling page (such
-                        as Calendly) or answer our onboarding questions, or by texting us first. Consent is
+                        equivalent consent option when you book a call with us on our Cal.com
+                        booking page or answer our onboarding questions, or by texting us first. Consent is
                         optional and is not a condition of booking a call or purchasing anything. We keep a
                         record of when and where you agreed.
                     </p>

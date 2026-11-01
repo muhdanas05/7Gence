@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../global/container";
-import { TrendingUp, Mail, BarChart3, Inbox, ArrowRight } from "lucide-react";
+import { TrendingUp, BarChart3, Inbox, ArrowRight } from "lucide-react";
 
 const results = [
   {
@@ -43,27 +43,6 @@ const results = [
       width: 100,
       height: 36,
       // Show original pink colors — contained in a rounded pill
-      style: { filter: "none", mixBlendMode: "normal" as const },
-      pill: true,
-    },
-  },
-  {
-    icon: Mail,
-    iconColor: "text-sky-400",
-    iconBg: "bg-sky-500/10",
-    tag: "Cold Email Outreach",
-    title: "Cold Email Outreach Infrastructure",
-    description:
-      "Built and operated targeted cold email outreach campaigns for two clients with distinct audiences. For PointFive, we ran outreach directed at creative agencies, positioning their services as a development partner for agency teams that needed to scale delivery. For Blueprint Labs, we targeted the events industry, connecting them with event companies actively in need of development support. Both campaigns used enriched, intent-based lead lists with personalized messaging sequences, resulting in a consistent pipeline of highly qualified inbound conversations.",
-    metric: "Highly qualified leads generated",
-    metricColor: "text-sky-400",
-    logo: {
-      type: "image" as const,
-      src: "/images/pointfive-logo.png",
-      alt: "PointFive",
-      width: 80,
-      height: 36,
-      // Dark bg logo — show in a dark pill so the bg is intentional
       style: { filter: "none", mixBlendMode: "normal" as const },
       pill: true,
     },

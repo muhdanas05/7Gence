@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../global/container";
-import { TrendingUp, BarChart3, Inbox, ArrowRight } from "lucide-react";
+import { TrendingUp, BarChart3, Inbox } from "lucide-react";
 
 const results = [
   {
@@ -209,17 +209,6 @@ const Results = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="flex flex-col items-center gap-3 mt-12">
-          <p className="text-xs text-muted-foreground/40 uppercase tracking-widest">or if you&apos;re curious</p>
-          <Link
-            href="/agency-developer-program"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 border border-border/50 hover:border-border rounded-full px-6 py-3 bg-background/40 hover:bg-background/80 backdrop-blur-sm"
-          >
-            Read some of our agency case studies
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </Link>
-        </div>
       </Container>
 
       {/* Client logo marquee */}

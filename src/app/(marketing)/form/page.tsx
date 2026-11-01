@@ -17,7 +17,15 @@ const STEPS: Step[] = [
         fields: [
             { name: "name", label: "Name", placeholder: "Your name", kind: "input", required: true },
             { name: "email", label: "Email", placeholder: "you@company.com", kind: "input", inputType: "email", required: true },
-            { name: "phone", label: "Phone number", placeholder: "+1 555 000 0000", kind: "input", inputType: "tel", required: true },
+            {
+                name: "phone",
+                label: "Phone number",
+                placeholder: "+1 555 000 0000",
+                kind: "input",
+                inputType: "tel",
+                required: true,
+                hint: "Want booking texts? You can opt in with the optional box on the last step.",
+            },
             { name: "company", label: "Company or organization", placeholder: "Company name (if applicable)", kind: "input" },
         ],
     },

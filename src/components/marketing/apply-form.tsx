@@ -40,6 +40,8 @@ export type FieldDef = {
     minToday?: boolean;
     /** Render only when another field holds this exact value. */
     showIf?: { field: string; equals: string };
+    /** Small helper text shown under the field. */
+    hint?: string;
 };
 
 export type Step = {
@@ -389,6 +391,10 @@ const ApplyForm = ({
                                                         </RadioGroup>
                                                     )}
                                                 />
+                                            )}
+
+                                            {f.hint && !errors[f.name] && (
+                                                <p className="text-xs text-muted-foreground">{f.hint}</p>
                                             )}
 
                                             {errors[f.name] && (

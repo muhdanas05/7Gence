@@ -30,8 +30,8 @@ export async function POST(req: Request) {
                 text: p.text,
             });
         }
-    } catch {
-        // always answer 200 so Telnyx does not retry
+    } catch (e) {
+        return new Response(\`error: \${e instanceof Error ? e.message : String(e)}\`, { status: 500 });
     }
     return new Response("ok");
 }

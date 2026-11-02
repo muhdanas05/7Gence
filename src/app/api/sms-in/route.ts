@@ -31,7 +31,7 @@ export async function POST(req: Request) {
             });
         }
     } catch (e) {
-        return new Response(\`error: \${e instanceof Error ? e.message : String(e)}\`, { status: 500 });
+        return new Response(`error: ${e instanceof Error ? e.message : String(e)}`, { status: 500 });
     }
     return new Response("ok");
 }

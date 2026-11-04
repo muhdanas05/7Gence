@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-  <Pause length="2"/>
-  <Record maxLength="45" playBeep="false" finishOnKey="#"/>
-</Response>

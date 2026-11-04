@@ -106,6 +106,7 @@ const AgencyProgramFormPage = () => (
         art="burst"
         sideNote="Our experts become your experts — white-label code, fully documented, integrated with your stack."
         steps={STEPS}
+        smsConsent
         webhookUrl={WEBHOOK_URL}
         submitLabel="Submit inquiry"
         successTitle="Inquiry received"

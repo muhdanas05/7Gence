@@ -15,7 +15,7 @@ export const FEATURES = [
     },
     {
         title: "Never Miss a Lead Again",
-        description: "AI voice agents that handle calls, qualify prospects, and book appointments with human-level accuracy. Your phone lines covered 24/7 — without hiring a single additional person.",
+        description: "Inbound and outbound AI voice agents that handle calls, qualify prospects, and book appointments with human-level accuracy. Your phone lines covered 24/7 — without hiring a single additional person.",
         icon: ChartColumnBigIcon,
         image: "/images/feature-one.svg",
     },
@@ -37,4 +37,4 @@ export const FEATURES = [
         icon: ZapIcon,
         image: "/images/feature-five.svg",
     }
-]
+]

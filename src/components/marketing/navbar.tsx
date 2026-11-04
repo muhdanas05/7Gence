@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
     const pathname = usePathname();
     const isOnFormPage = pathname === "/form";
+    const isOnAgencyDevPage = pathname === "/agency-developer-program";
 
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -55,9 +56,14 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Link href={isOnFormPage ? "/" : "/form"} className="hidden lg:block">
+                        <Link href={isOnFormPage || isOnAgencyDevPage ? "/" : "/form"} className="hidden lg:block">
                             <Button variant="outline">
-                                {isOnFormPage ? "Home" : "Project Inquiry"}
+                                {isOnFormPage || isOnAgencyDevPage ? "Home" : "Project Inquiry"}
+                            </Button>
+                        </Link>
+                        <Link href="/agency-developer-program" className="hidden lg:block">
+                            <Button variant="outline">
+                                Agency Program
                             </Button>
                         </Link>
                         <Link href="https://cal.com/muhammad-anas-s6hodg/discovery-call" className="hidden lg:block">

@@ -4,6 +4,17 @@ import Container from "../global/container";
 import { BUSINESS, BUSINESS_ADDRESS_ONE_LINE } from "@/constants/business";
 
 const Footer = () => {
+    const handleScrollToFeatures = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const element = document.getElementById('in-house-innovations');
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <footer className="flex flex-col relative items-center justify-center border-t border-foreground/5 pt-8 pb-8 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-12 overflow-hidden">
             <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
@@ -26,6 +37,21 @@ const Footer = () => {
 
                 <div className="grid-cols-2 gap-8 grid mt-8 xl:col-span-2 xl:mt-0">
                     <div className="md:grid md:grid-cols-2 md:gap-8">
+                        <Container delay={0.1} className="h-auto">
+                            <h3 className="text-base font-medium text-foreground">
+                                Product
+                            </h3>
+                            <ul className="mt-4 text-sm text-muted-foreground space-y-4">
+                                <li className="mt-2">
+                                    <button 
+                                        onClick={handleScrollToFeatures}
+                                        className="link hover:text-foreground transition-all duration-300 text-left"
+                                    >
+                                        Features
+                                    </button>
+                                </li>
+                            </ul>
+                        </Container>
                         <Container delay={0.2} className="h-auto">
                             <div className="mt-6 md:mt-0 flex flex-col">
                                 <h3 className="text-base font-medium text-foreground">

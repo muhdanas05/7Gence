@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, FileText, Calendar } from "lucide-react";
+import { Menu, Home, FileText, Calendar, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -10,6 +10,7 @@ import { useState } from "react";
 const MobileMenu = () => {
     const pathname = usePathname();
     const isOnFormPage = pathname === "/form";
+    const isOnAgencyPage = pathname === "/agency-developer-program";
     const [isOpen, setIsOpen] = useState(false);
 
     const handleButtonClick = () => {
@@ -36,12 +37,12 @@ const MobileMenu = () => {
                 </SheetHeader>
                 <nav className="flex flex-col">
                     <div className="space-y-6">
-                        <Link href={isOnFormPage ? "/" : "/form"} className="w-full" onClick={handleButtonClick}>
+                        <Link href={isOnFormPage ? "/" : isOnAgencyPage ? "/" : "/form"} className="w-full" onClick={handleButtonClick}>
                             <Button 
                                 className="w-full h-14 text-base font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" 
-                                variant={isOnFormPage ? "default" : "outline"}
+                                variant={isOnFormPage || isOnAgencyPage ? "default" : "outline"}
                             >
-                                {isOnFormPage ? (
+                                {isOnFormPage || isOnAgencyPage ? (
                                     <>
                                         <Home className="h-5 w-5 mr-3" />
                                         Home
@@ -54,6 +55,17 @@ const MobileMenu = () => {
                                 )}
                             </Button>
                         </Link>
+                        <div className="pt-1">
+                            <Link href="/agency-developer-program" className="w-full" onClick={handleButtonClick}>
+                                <Button 
+                                    className="w-full h-14 text-base font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" 
+                                    variant="outline"
+                                >
+                                    <Users className="h-5 w-5 mr-3" />
+                                    Agency Program
+                                </Button>
+                            </Link>
+                        </div>
                         <div className="pt-1">
                             <Link href="https://cal.com/muhammad-anas-s6hodg/discovery-call" className="w-full" onClick={handleButtonClick}>
                                 <Button 

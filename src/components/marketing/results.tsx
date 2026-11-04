@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../global/container";
-import { TrendingUp, BarChart3, Inbox } from "lucide-react";
+import { TrendingUp, Mail, BarChart3, Inbox, ArrowRight } from "lucide-react";
 
 const results = [
   {
@@ -43,6 +43,27 @@ const results = [
       width: 100,
       height: 36,
       // Show original pink colors — contained in a rounded pill
+      style: { filter: "none", mixBlendMode: "normal" as const },
+      pill: true,
+    },
+  },
+  {
+    icon: Mail,
+    iconColor: "text-sky-400",
+    iconBg: "bg-sky-500/10",
+    tag: "Cold Email Outreach",
+    title: "Cold Email Outreach Infrastructure",
+    description:
+      "Built and operated targeted cold email outreach campaigns for two clients with distinct audiences. For PointFive, we ran outreach directed at creative agencies, positioning their services as a development partner for agency teams that needed to scale delivery. For Blueprint Labs, we targeted the events industry, connecting them with event companies actively in need of development support. Both campaigns used enriched, intent-based lead lists with personalized messaging sequences, resulting in a consistent pipeline of highly qualified inbound conversations.",
+    metric: "Highly qualified leads generated",
+    metricColor: "text-sky-400",
+    logo: {
+      type: "image" as const,
+      src: "/images/pointfive-logo.png",
+      alt: "PointFive",
+      width: 80,
+      height: 36,
+      // Dark bg logo — show in a dark pill so the bg is intentional
       style: { filter: "none", mixBlendMode: "normal" as const },
       pill: true,
     },
@@ -209,6 +230,17 @@ const Results = () => {
           ))}
         </div>
 
+        {/* CTA */}
+        <div className="flex flex-col items-center gap-3 mt-12">
+          <p className="text-xs text-muted-foreground/40 uppercase tracking-widest">or if you&apos;re curious</p>
+          <Link
+            href="/agency-developer-program"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 border border-border/50 hover:border-border rounded-full px-6 py-3 bg-background/40 hover:bg-background/80 backdrop-blur-sm"
+          >
+            Read some of our agency case studies
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
+        </div>
       </Container>
 
       {/* Client logo marquee */}
